@@ -97,13 +97,14 @@ def mail(new_open_port, del_port, ip_a):
     password = "PASSWORD"
 
     message = MIMEMultipart("alternative")
-    message["Subject"] = "NmapEmail"
+    message["Subject"] = "NmapEmail report"
     message["From"] = sender_email
     message["To"] = receiver_email
 
     # Create the plain-text and HTML version of your message
     text = """\
-    Test av python sin epost modul
+    Report from NmapEmail scan
+
     New port open: %s
     Removed ports: %s
     on IP %s""" % (', '.join(new_open_port), ', '.join(del_port), ip_a)
