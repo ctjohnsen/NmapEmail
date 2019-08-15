@@ -8,6 +8,6 @@ Sender_email, receiver_email and password needs to be added in **def mail**.
 
 ### To use
 To use start with **python3 nmap_email.py -new *ip address to scan*** to make a template.
-To compare template with a new scan run **python3 nmap_mail.py -ip *ip address to scan***
+To compare template with a new scan run **python3 nmap_email.py -ip *ip address to scan***
 
 In **def nmap** you can change the syntax used with nmap.
