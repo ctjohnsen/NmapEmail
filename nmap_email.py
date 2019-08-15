@@ -1,5 +1,5 @@
 """
-Nmap and email.
+NmapEmail.
 **Author:** Christoffer Thorske Johnsen
 **Created:** 15.08.2019
 """
@@ -92,12 +92,12 @@ def new_ports(xml_file_name, ip_a):
 
 def mail(new_open_port, del_port, ip_a):
     """Send mail with the new open ports."""
-    sender_email = "ctjohnsen.python@gmail.com"
-    receiver_email = "ctjohnsen@gmail.com"
-    password = "epost860632python"
+    sender_email = "SENDER"
+    receiver_email = "RECEIVER"
+    password = "PASSWORD"
 
     message = MIMEMultipart("alternative")
-    message["Subject"] = "test"
+    message["Subject"] = "NmapEmail"
     message["From"] = sender_email
     message["To"] = receiver_email
 
