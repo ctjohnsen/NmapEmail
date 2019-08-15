@@ -78,14 +78,16 @@ def new_ports(xml_file_name, ip_a):
             try:
                 new_portnum.remove(a_port)
             except (ValueError, IndexError):
-                print('\nRemoved port:')
-                print(a_port)
                 del_port.append(a_port)
 
-        print('\nNew ports:')
         for b_port in new_portnum:
-            print(b_port)
             new_open_port.append(b_port)
+
+        print('\nRemoved port:')
+        print(', '.join(del_port))
+
+        print('\nNew ports:')
+        print(', '.join(new_open_port))
 
         mail(new_open_port, del_port, ip_a)
 
